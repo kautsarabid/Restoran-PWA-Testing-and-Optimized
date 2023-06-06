@@ -2,17 +2,15 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantTemplate = (resto) => `
 <div class="restaurant-list">
-<a href="/#/detail/${resto.id}">
-    <img class="restaurant-list-thumb" src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL + resto.pictureId : 'images/heros/hero-image_2.jpg'}" alt="${resto.name || '-'}" title="${resto.name || '-'}" crossorigin="anonymous">
+  <a href="/#/detail/${resto.id}">
+    <img class="restaurant-list-thumb lazyload" src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL + resto.pictureId : 'images/heros/hero-image_2.jpg'}" alt="${resto.name || '-'}" title="${resto.name || '-'}" crossorigin="anonymous">
       <div class="deskripsi-restaurant-list">
-          <h4 class="restaurant-list-title" id="restaurant__title"> 
-              ${resto.name || '-'}
-          </h4>
+          <h4 class="restaurant-list-title" id="restaurant__title">${resto.name || '-'}</h4>
           <p class="city">${resto.city || '-'}</p>
       </div>
       <p class="restaurant-list-rating" title="Rating">${resto.rating || '-'}</p>
-      </div>
-      </a>
+  </a>
+</div>
 `;
 
 const createDetailRestaurant = (resto) => `
@@ -22,7 +20,7 @@ const createDetailRestaurant = (resto) => `
       ${resto.name}
     </h2>
     <div class="content-detail-restaurant">
-      <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" crossorigin="anonymous"/>
+      <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" crossorigin="anonymous"/>
 
       <div class="info">
         <ul>
