@@ -12,11 +12,11 @@ class NavbarCustom extends HTMLElement {
         </a>
       </div>
 
-      <a class="menu-toggle" href="#">
+      <button class="menu-toggle" type="button">
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
 
       <ul>
         <li><a href="/">Home</a></li>
