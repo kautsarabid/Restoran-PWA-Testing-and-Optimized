@@ -1,7 +1,6 @@
 {
   "builds": [
     {
-      "src": "webpack.prod.js",
       "use": "@vercel/static-build",
       "config": { "zeroConfig": true }
     }
