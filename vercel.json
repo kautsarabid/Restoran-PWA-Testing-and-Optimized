@@ -1,6 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "webpack.prod.js", "use": "@vercel/static-build" }
-  ]
+  "version": 2
 }
